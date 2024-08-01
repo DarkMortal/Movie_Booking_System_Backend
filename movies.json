@@ -1,0 +1,257 @@
+[
+    {
+        "name": "Your Name",
+        "synopsis": "Two teenagers share a profound, magical connection upon discovering they are swapping bodies. As they navigate their unique bond across space and time, a looming disaster threatens to unravel everything.",
+        "poster_image": "https://sbpress.com/wp-content/uploads/2017/04/YourName-heading.jpg",
+        "genres": [
+            "Animation",
+            "Drama",
+            "Fantasy"
+        ],
+        "id": 1
+    },
+    {
+        "name": "Spirited Away",
+        "synopsis": "A young girl, Chihiro, becomes trapped in a mysterious and magical world after her parents are transformed into pigs. To survive and find a way to free her parents, she must navigate the strange and dangerous realm while working in a bathhouse run by a witch.",
+        "poster_image": "https://static1.colliderimages.com/wordpress/wp-content/uploads/2023/12/8-best-characters-in-spirited-away-ranked.jpg",
+        "genres": [
+            "Animation",
+            "Adventure",
+            "Family"
+        ],
+        "id": 2
+    },
+    {
+        "name": "The Garden of Words",
+        "synopsis": "A lonely teenager skips his morning lessons to sit in a lovely garden, where he meets a mysterious older woman who shares his feelings of alienation. Their relationship deepens as they continue to meet and share their troubles.",
+        "poster_image": "https://static1.thegamerimages.com/wordpress/wp-content/uploads/2021/04/pjimage-58-1.jpg",
+        "genres": [
+            "Animation",
+            "Drama",
+            "Romance"
+        ],
+        "id": 3
+    },
+    {
+        "name": "Grave of the Fireflies",
+        "synopsis": "In the aftermath of World War II, two siblings struggle to survive in war-torn Japan. As they face hunger and hardships, their bond and resilience are tested in the harshest of circumstances.",
+        "poster_image": "https://m.media-amazon.com/images/M/MV5BMjE3MzkwMTM4MV5BMl5BanBnXkFtZTcwMDg5MDI2NQ@@._V1_.jpg",
+        "genres": [
+            "Animation",
+            "Drama",
+            "War"
+        ],
+        "id": 4
+    },
+    {
+        "name": "Breaking Bad",
+        "synopsis": "A high school chemistry teacher turned methamphetamine manufacturer partners with a former student to secure his family's financial future while grappling with the moral and criminal implications of his new life.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/juk4gi80/poster/g/r/v/large-newposter9037-breaking-bad-wall-poster-large-print-on-original-imaf5thxvkkpgjuf.jpeg",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "id": 5
+    },
+    {
+        "name": "Inception",
+        "synopsis": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/juk4gi80/poster/7/y/y/large-newposter8952-wall-poster-a-wallpapers-inception-animated-original-imaf5tgggcfznyfd.jpeg",
+        "genres": [
+            "Action",
+            "Sci-Fi",
+            "Thriller"
+        ],
+        "id": 6
+    },
+    {
+        "name": "The Shawshank Redemption",
+        "synopsis": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/k77xx8w0/poster/c/g/t/medium-the-shawshank-redemption-movie-poster-for-room-with-gloss-original-imafphnwmxjkvfjf.jpeg",
+        "genres": [
+            "Drama"
+        ],
+        "id": 7
+    },
+    {
+        "name": "The Godfather",
+        "synopsis": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/l0fm07k0/poster/x/o/c/medium-godfather-don-vito-corleone-black-rose-wall-poster-print-original-imagc88xmzemjtgn.jpeg",
+        "genres": [
+            "Crime",
+            "Drama"
+        ],
+        "id": 8
+    },
+    {
+        "name": "The Dark Knight",
+        "synopsis": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/jbfe7ww0-1/poster/g/k/c/medium-ashd-wall-poster-batman-the-dark-knight-bat-signal-original-imaet2nugm94hvyj.jpeg",
+        "genres": [
+            "Action",
+            "Crime",
+            "Thriller"
+        ],
+        "id": 9
+    },
+    {
+        "name": "Peaky Blinders",
+        "synopsis": "Set in post-World War I Birmingham, England, the series follows the Shelby crime family and their ambitious leader, Tommy Shelby. As they expand their empire, they face challenges from rival gangs, law enforcement, and political figures.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/x/z/d/small-spos13894-poster-tv-show-peaky-blinders-sl-13903-wall-original-imaggefhgkz8jtfw.jpeg",
+        "genres": [
+            "Crime",
+            "Drama"
+        ],
+        "id": 10
+    },
+    {
+        "name": "Forrest Gump",
+        "synopsis": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/knunf680/poster/r/f/m/medium-forrest-gump-movie-wall-poster-for-room-with-gloss-original-imag2g3ayv2gd3ev.jpeg",
+        "genres": [
+            "Drama",
+            "Romance"
+        ],
+        "id": 11
+    },
+    {
+        "name": "Fight Club",
+        "synopsis": "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/l2dmky80/poster/u/z/1/small-poster-fight-club-sl980-wall-poster-13x19-inches-matte-original-imagdqenzpjkdpzb.jpeg",
+        "genres": [
+            "Action",
+            "Drama"
+        ],
+        "id": 12
+    },
+    {
+        "name": "The Matrix",
+        "synopsis": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/juk4gi80/poster/h/c/q/large-newposter8930-wall-poster-movies-the-matrix-poster-large-original-imaf5tgtzvb8pdpc.jpeg",
+        "genres": [
+            "Action",
+            "Sci-Fi"
+        ],
+        "id": 13
+    },
+    {
+        "name": "The Lord of the Rings: The Return of the King",
+        "synopsis": "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/l2dmky80/poster/v/i/4/small-poster-the-lord-of-the-rings-the-return-of-the-king-the-original-imagdqeztrqjgsct.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "id": 14
+    },
+    {
+        "name": "Interstellar",
+        "synopsis": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/4/z/x/small-spos8585-poster-movie-interstellar-wall-poster-sl-8585-original-imaghzwa4c7zahsz.jpeg",
+        "genres": [
+            "Adventure",
+            "Drama",
+            "Sci-Fi"
+        ],
+        "id": 15
+    },
+    {
+        "name": "Gladiator",
+        "synopsis": "A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/jc0ttow0-2/poster/2/h/e/large-movie-gladiator-hd-wall-poster-poster-print-on-36x24-original-imafyj52ypergy5f.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Drama"
+        ],
+        "id": 16
+    },
+    {
+        "name": "Titanic",
+        "synopsis": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/j/a/u/small-poster-movie-titanic-sl-16060-wall-poster-13x19-inches-original-imaghuseyue4sezy.jpeg",
+        "genres": [
+            "Drama",
+            "Romance"
+        ],
+        "id": 17
+    },
+    {
+        "name": "Avatar",
+        "synopsis": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/l111lzk0/poster/p/m/1/large-avatar-high-resolution-on-fine-art-paper-on-24x36-large-original-imagczudxz4fena8.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "id": 18
+    },
+    {
+        "name": "The Avengers",
+        "synopsis": "Earth's mightiest heroes must come together and learn to fight as a team if they are to stop the mischievous Loki and his alien army from enslaving humanity.",
+        "poster_image": "https://rukminim2.flixcart.com/image/750/900/juk4gi80/poster/2/h/d/large-newposter7821-avengers-movie-poster-large-print-on-36x24-original-imaf5z4sw99npcxw.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "id": 19
+    },
+    {
+        "name": "Jurassic Park",
+        "synopsis": "During a preview tour, a theme park suffers a major power breakdown that allows its cloned dinosaur exhibits to run amok.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/l1l1rww0/poster/5/o/a/small-poster-jurassic-park-poster-wall-poster-sl1757-13x19-original-imagd4adewtgsd7a.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Sci-Fi"
+        ],
+        "id": 20
+    },
+    {
+        "name": "Star Wars: Episode IV - A New Hope",
+        "synopsis": "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee, and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth Vader.",
+        "poster_image": "https://rukminim2.flixcart.com/image/850/1000/xif0q/poster/9/l/i/small-spos13355-poster-movie-star-wars-darth-vader-princess-leia-original-imaggefhqx6grdew.jpeg",
+        "genres": [
+            "Action",
+            "Adventure",
+            "Fantasy"
+        ],
+        "id": 21
+    },
+    {
+        "name": "Oppenheimer",
+        "synopsis": "A biographical drama that explores the life of J. Robert Oppenheimer, the theoretical physicist who played a pivotal role in developing the atomic bomb during World War II, and the moral and ethical dilemmas he faced.",
+        "poster_image": "https://cdn.mos.cms.futurecdn.net/cCPNy2QiwA2Hf5aRdjnrte.jpg",
+        "genres": [
+            "Biography",
+            "Drama",
+            "History"
+        ],
+        "id": 22
+    },
+    {
+        "name": "The Departed",
+        "synopsis": "An undercover cop and a mole in the police attempt to identify each other while infiltrating an Irish gang in South Boston.",
+        "poster_image": "https://m.media-amazon.com/images/I/71XlLHgkLFL.jpg",
+        "genres": [
+            "Crime",
+            "Drama",
+            "Thriller"
+        ],
+        "id": 23
+    },
+    {
+        "name": "The Social Network",
+        "synopsis": "As Harvard student Mark Zuckerberg creates the social networking site that would become known as Facebook, he is sued by the twins who claimed he stole their idea and by the co-founder who was later squeezed out of the business.",
+        "poster_image": "https://i.etsystatic.com/37302089/r/il/9376e8/4278869195/il_1080xN.4278869195_2s5t.jpg",
+        "genres": [
+            "Biography",
+            "Drama"
+        ],
+        "id": 24
+    }
+]
