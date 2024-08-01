@@ -5,7 +5,7 @@ if __name__ == "__main__":
     with open('movies.json') as json_data:
         data = json.load(json_data)
         for i in data:
-            movie = Movie(id_ = i['id'],
+            movie = Movie(id_ = int(i['id']),
                           title_ = i['name'],
                           description_ = i['synopsis'],
                           genres_= i["genres"].__str__().replace("'",'''"'''),

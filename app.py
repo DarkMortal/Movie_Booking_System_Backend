@@ -168,15 +168,14 @@ def route_6():
     if request.origin not in allowed_origins: return '', 403
     data = json.loads(request.data.decode("utf-8"))
 
-    # check if booking already exists
-    booking = session.query(Booking).filter(Booking.user_id == data['user_id']).all()
+    bookings = session.query(Booking, Movie).filter(and_(Booking.user_id == data['user_id'], Booking.movie_id == Movie.id)).all()
     session.close()
 
     res = {}
     
     try:
-        for book in booking:
-            res[book.movie_id] = book.booking_date
+        for book in bookings:
+            res[book[0].movie_id] = {'name': book[1].title, 'date': book[0].booking_date}
         return res
     except Exception:
         return {

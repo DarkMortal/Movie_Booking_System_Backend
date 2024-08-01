@@ -8,9 +8,9 @@ db_uri = os.environ.get("DB_URI")
 Base = declarative_base()
 
 class Movie(Base):
-    __tablename__ = "retreats"
+    __tablename__ = "movies"
 
-    id = Column('id', String, primary_key = True)
+    id = Column('id', Integer, primary_key = True)
     title = Column("title", String)
     description = Column("description", String)
     image = Column('image', String)
