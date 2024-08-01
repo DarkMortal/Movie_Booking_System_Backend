@@ -10,7 +10,7 @@ from datetime import datetime
 app = Flask(__name__)
 app.config['SECRET_KEY'] = os.environ['SECRET']
 
-allowed_origins = ['http://localhost:5173', 'https://darkmortal.github.io/']
+allowed_origins = ['http://localhost:5173', 'https://darkmortal.github.io']
 
 res_to_doc = lambda x: {
         'id': x.id,
