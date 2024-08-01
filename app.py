@@ -2,7 +2,7 @@ import jwt, json, os
 from dotenv import load_dotenv; load_dotenv()
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy import or_, and_
-from flask import Flask, request
+from flask import Flask, request, make_response
 from models import Movie, Booking, User, session
 from password_hash import check_password
 from datetime import datetime
@@ -22,7 +22,6 @@ res_to_doc = lambda x: {
 
 @app.route("/", methods = ['GET'])
 def route_1():
-    print(request.origin)
     if request.origin not in allowed_origins: return '', 403
     res = []
     page_number = request.args.get('page')
@@ -54,7 +53,10 @@ def route_1():
             
     for i in movies: res.append(res_to_doc(i))
     session.close()
-    return res
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','GET')
+    return response
 
 @app.route("/<id_>", methods = ['GET'])
 def route_2(id_):
@@ -63,7 +65,10 @@ def route_2(id_):
     session.close()
     if movie is None:
         return 'No record found'
-    return res_to_doc(movie)
+    response = make_response(res_to_doc(movie))
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','GET')
+    return response
 
 @app.route("/signup", methods = ['POST'])
 def route_3():
@@ -74,26 +79,31 @@ def route_3():
         email = data['user_email'],
         password = data['user_password']
     )
+    res = {}
     try:
         session.add(user)
         session.commit()
+        session.close()
+        res = {
+            'type': "success",
+            'message': "Data saved successfuly"
+        }
     except IntegrityError:
         session.close()
-        return {
+        res = {
             'type': "warning",
             'message': "Username or email already in use"
         }
     except Exception:
         session.close()
-        return {
+        res = {
             'type': "error",
             'message': "There was an error"
         }
-    session.close()
-    return {
-        'type': "success",
-        'message': "Data saved successfuly"
-    }
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','POST')
+    return response
 
 @app.route("/login", methods = ['POST'])
 def route_4():
@@ -102,12 +112,18 @@ def route_4():
     name = data['user_name']
     password = data['user_password']
 
+    res = {}
+
     user = session.query(User).filter(User.user_name == name).first()
     if user is None:
-        return {
+        res = {
             'type': "error",
             'message': "User doesn't exist"
         }
+        response = make_response(res)
+        response.headers.add('Access-Control-Allow-Origin', request.origin)
+        response.headers.add('Access-Control-Allow-Methods','POST')
+        return response
     if check_password(password, user.user_password_hash):
 
         token = jwt.encode({
@@ -116,17 +132,21 @@ def route_4():
             # 'expiration': str(datetime.utcnow() + timedelta(seconds = 100))
         }, app.config['SECRET_KEY'], algorithm = 'HS256')
 
-        return {
+        res = {
             'type': "success",
             'message': "Login successful",
             'id': user.user_id,
             'name': user.user_name,
             'token': token
         }
-    else: return {
+    else: res = {
             'type': "warning",
             'message': "Invalid credentials"
         }
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','POST')
+    return response
 
 @app.route("/book", methods = ['POST'])
 def route_5():
@@ -138,10 +158,17 @@ def route_5():
         Booking.user_id == data['user_id'], Booking.movie_id == data['movie_id']
     )).first()
 
-    if booking is not None: return {
-        'type': 'warning',
-        'message': 'Movie already booked for this user'
-    }
+    res = {}
+
+    if booking is not None: 
+        res = {
+            'type': 'warning',
+            'message': 'Movie already booked for this user'
+        }
+        response = make_response(res)
+        response.headers.add('Access-Control-Allow-Origin', request.origin)
+        response.headers.add('Access-Control-Allow-Methods','POST')
+        return response
     
     booking  = Booking(
         u_id = data['user_id'],
@@ -151,17 +178,21 @@ def route_5():
     try:
         session.add(booking)
         session.commit()
+        session.close()
+        res = {
+            'type': 'success',
+            'message': 'Movie booked'
+        }
     except Exception:
         session.close()
-        return {
+        res = {
             'type': 'error',
             'message': 'There was some error'
         }
-    session.close()
-    return {
-        'type': 'success',
-        'message': 'Movie booked'
-    }
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','POST')
+    return response
 
 @app.route("/getAllBookings", methods = ['POST'])
 def route_6():
@@ -176,12 +207,15 @@ def route_6():
     try:
         for book in bookings:
             res[book[0].movie_id] = {'name': book[1].title, 'date': book[0].booking_date}
-        return res
     except Exception:
-        return {
+        res = {
             'type': 'error',
             'message': 'There was some error'
         }
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','POST')
+    return response
 
 @app.route("/deleteBooking", methods = ['POST'])
 def route_7():
@@ -192,19 +226,25 @@ def route_7():
         Booking.user_id == data['user_id'], Booking.movie_id == data['movie_id']
     )).delete()
 
+    res = {}
+
     try:
         session.commit()
+        session.close()
+        res = {
+            'type': 'success',
+            'message': 'Booking deleted'
+        }
     except Exception:
         session.close()
-        return {
+        res = {
             'type': 'error',
             'message': 'There was some error'
         }
-    session.close()
-    return {
-        'type': 'success',
-        'message': 'Booking deleted'
-    }
+    response = make_response(res)
+    response.headers.add('Access-Control-Allow-Origin', request.origin)
+    response.headers.add('Access-Control-Allow-Methods','POST')
+    return response
 
 @app.route("/getUserDetails", methods = ['POST'])
 def route_8():
@@ -214,7 +254,11 @@ def route_8():
     if 'jwtAuthToken' not in data.keys():
         return '', 403
     try:
-        return jwt.decode(data['jwtAuthToken'], app.config['SECRET_KEY'], algorithms = ['HS256'])
+        res = jwt.decode(data['jwtAuthToken'], app.config['SECRET_KEY'], algorithms = ['HS256'])
+        response = make_response(res)
+        response.headers.add('Access-Control-Allow-Origin', request.origin)
+        response.headers.add('Access-Control-Allow-Methods','POST')
+        return response
     except Exception as exc:
         print(exc)
         return '', 500
